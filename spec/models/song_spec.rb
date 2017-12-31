@@ -16,7 +16,7 @@ RSpec.describe Song, type: :model do
   end
 
   describe "association with artist" do
-    let(:artist) { create :artist }
+
 
     it "belongs to a artist" do
       song = artist.songs.build

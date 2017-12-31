@@ -28,8 +28,8 @@ RSpec.describe Artist, type: :model do
   end
 
   describe "association with songs" do
-    let(:artist) { create :artist }
-    let!(:song) { create :song, artist: artist }
+
+    let!(:song) { create :song }
 
     it "has many songs" do
       song1 = artist.songs.new
