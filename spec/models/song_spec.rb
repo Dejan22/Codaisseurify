@@ -8,10 +8,10 @@ RSpec.describe Song, type: :model do
       expect(song.errors).to have_key(:title)
     end
 
-    it "is invalid without a year" do
-      song = Song.new(year: nil)
+    it "is invalid without album" do
+      song = Song.new(album: nil)
       song.valid?
-      expect(song.errors).to have_key(:year)
+      expect(song.errors).to have_key(:album)
     end
   end
 

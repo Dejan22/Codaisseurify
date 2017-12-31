@@ -3,27 +3,27 @@ require 'rails_helper'
 RSpec.describe Artist, type: :model do
   describe "Validations" do
     it "is invalid without a name" do
-      artist = Artist.new(name: nil)
+      artist = Artist.new(artist_name: nil)
       artist.valid?
-      expect(artist.errors).to have_key(:name)
+      expect(artist.errors).to have_key(:artist_name)
     end
 
-    it "is invalid without a description" do
-      artist = Artist.new(description: nil)
+    it "is invalid without a first name" do
+      artist = Artist.new(first_name: nil)
       artist.valid?
-      expect(artist.errors).to have_key(:description)
+      expect(artist.errors).to have_key(:first_name)
     end
 
-    it "is invalid with a description longer than 500 characters" do
-      artist = Artist.new(description: "x"*501)
+    it "is invalid without last name" do
+      artist = Artist.new(last_name: nil)
       artist.valid?
-      expect(artist.errors).to have_key(:description)
+      expect(artist.errors).to have_key(:last_name)
     end
 
-    it "is invalid without a type" do
-      artist = Artist.new(artist_type: nil)
+    it "is invalid without a genre" do
+      artist = Artist.new(genre: nil)
       artist.valid?
-      expect(artist.errors).to have_key(:artist_type)
+      expect(artist.errors).to have_key(:genre)
     end
   end
 

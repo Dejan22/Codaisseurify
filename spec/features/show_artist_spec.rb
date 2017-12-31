@@ -1,17 +1,13 @@
 require 'rails_helper'
 
-describe "Viewing an individual room" do
-  let(:room) { create :room }
+describe "Viewing an individual artist" do
+  let(:song) { create :song }
 
-  it "shows the room's details" do
-    visit room_url(room)
+  it "shows the songss details" do
+    visit song_url(song)
 
-    expect(page).to have_text(room.home_type)
-    expect(page).to have_text(room.accommodate)
-    expect(page).to have_text(room.bedroom_count)
-    expect(page).to have_text(room.bathroom_count)
-    expect(page).to have_text(room.listing_name)
-    expect(page).to have_text(room.description)
-    expect(page).to have_text(room.address)
+    expect(page).to have_text(song.title)
+    expect(page).to have_text(song.album)
+  
   end
 end
