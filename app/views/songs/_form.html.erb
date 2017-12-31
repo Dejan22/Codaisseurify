@@ -1,32 +1,32 @@
 <%= form_for [@artist, @artist.songs.new] do |f| %>
 
-    <div class="form-group">
-        <label>Title</label>
-          <div class="col-lg-4">
-            <%= f.text_field :title, placeholder: "Enter title of the song", class: "form-control" %>
-          </div>
-    </div>
+  <div class="form-group">
+      <label>Title</label>
+        <div class="col-lg-4">
+          <%= f.text_field :title, placeholder: "Enter title of the song", class: "form-control" %>
+        </div>
+  </div>
 
-    <div class="form-group">
-        <label>Album</label>
-          <div class="col-lg-4">
-          <%= f.text_field :album, placeholder: "Enter album title", class: "form-control" %>
-          </div>
-    </div>
+  <div class="form-group">
+    <label>Album</label>
+      <div class="col-lg-4">
+        <%= f.text_field :album, placeholder: "Enter album title", class: "form-control" %>
+      </div>
+  </div>
 
-    <div class="form-group">
-        <label>Track number on album</label>
-          <div class="col-lg-1">
-          <%= f.number_field :album_track_number, placeholder: "1", class: "form-control" %>
-          </div>
-    </div>
+  <div class="form-group">
+    <label>Track number on album</label>
+      <div class="col-lg-1">
+      <%= f.number_field :album_track_number, placeholder: "1", class: "form-control" %>
+      </div>
+  </div>
 
-    <div class="form-group">
-        <label>Release date</label>
-        <%= f.date_select :release_date, class: "form-control" %>
-    </div>
+  <div class="form-group">
+    <label>Release date</label>
+    <%= f.date_select :release_date, class: "form-control" %>
+  </div>
 
-    <div class="actions">
-        <%= f.submit "Save", class: "btn btn-primary" %>
-    </div>
+  <div class="actions">
+  <%= f.submit "Save", class: "btn btn-primary" %>
+  </div>
 <% end %>
