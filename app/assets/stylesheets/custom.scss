@@ -8,7 +8,7 @@
 
 .navbar.navbar-default.navbar-static-top .dropdown-menu li a,
 .navbar.navbar-default.navbar-static-top .dropdown-menu a:hover {
-    color: #fff;
+    color: #000000;
 }
 
 .filter {
@@ -31,7 +31,7 @@
 
 .thumbnail.product>img,
 .thumbnail.product a>img {
-    max-height: inherit;
+    max-height: 300px;
 }
 
 .thumbnail .category-title {
@@ -45,4 +45,13 @@
 .caption .btn {
     left: 43%;
     position: relative;
+}
+
+.image_small {
+  height: 300px;
+  margin-left: 300px;
+}
+
+.name_under_photo {
+  margin-left: 340px;
 }

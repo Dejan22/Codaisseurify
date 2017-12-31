@@ -1,7 +1,9 @@
 FactoryBot.define do
   factory :song do
-    title     { Faker::Lorem.words(3).join(' ') }
-    year      (1950 + Random.rand(60))
-    artist    { build(:artist) }
+    
+    title     "Autumn in New York"
+    album     "The Complete Verve Master Takes"
+    release_date     (1950 + Random.rand(60))
+    artist    "2003"
   end
 end
