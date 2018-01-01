@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :artist do
-    name          "Miles Davis"
-    
+    name          { Faker::Name.name }
+    genre         "Jazz"
+
   end
 end

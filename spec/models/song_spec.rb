@@ -13,16 +13,15 @@ RSpec.describe Song, type: :model do
       song.valid?
       expect(song.errors).to have_key(:album)
     end
-  end
 
-  describe "association with artist" do
+    it "is invalid without album" do
+      song = Song.new(release_date: nil)
+      song.valid?
+      expect(song.errors).to have_key(:release_date)
+    end
 
-
-    it "belongs to a artist" do
-      song = artist.songs.build
-
-      expect(song.artist).to eq(artist)
+    describe "association with artist" do
+    it { is_expected.to belong_to :artist}
     end
   end
-
 end

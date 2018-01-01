@@ -8,12 +8,15 @@
       <div class="col-md-8">
       <% @artist.songs.each do |song| %>
         <ul>
-             <li><p><b>Song:</b> <%= song.title %></p> <p> <b>Album:</b> <%=  song.album %> </p>
-            <%= link_to "Delete", artist_song_path( @artist, song ), class: "btn btn-default", method: :delete, data: { confirm: "Are you sure?" } %></li>
+            <li>
+              <p><b>Song:</b> <%= song.title %></p>
+              <p> <b>Album:</b> <%=  song.album %> </p><p>
+              <%= link_to "Delete", artist_song_path( @artist, song ), class: "btn btn-default", method: :delete, data: { confirm: "Are you sure?" } %>
+            </li>
         </ul>
-    <% end %>
-      </div>
-</div>
+      <% end %>
+     </div>
+  </div>
 
 
 <div class="col-md-8">
