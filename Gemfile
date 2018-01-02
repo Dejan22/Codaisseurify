@@ -49,6 +49,8 @@ group :development, :test, :production do
   gem 'carrierwave', '0.11.2'
   gem 'cloudinary', '1.2.3'
   gem 'rails_12factor'
+  gem 'selenium-webdriver'
+  gem "chromedriver-helper"
 end
 
 group :development do
