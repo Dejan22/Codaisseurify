@@ -26,21 +26,19 @@ RSpec.describe Artist, type: :model do
       expect(artist.errors).to have_key(:genre)
     end
  end
- 
-#  describe "Artist has many songs" do
-#   # let!(:artist) { create :artist }
 
-#   it "Destroys an artist" do
-#   artist.destroy
-#   expect(Artist.all.count).to match(1)
-# end
-#
-#     it "deletes associated songs" do
-#       Song = 10
-#        artist.deatroy
-#        expect(Song.all.count).to match(0)
-#     end
-#   end
+ describe "Artist has many songs" do
+   let!(:artist) { create :artist }
 
+    it "Destroys an artist" do
+    artist.destroy
+    expect(Artist.all.count).to match(0)
+    end
 
+    it "deletes associated songs" do
+      artist = Artist.new
+      artist.destroy
+      expect(Song.count).to match(0)
+    end
+  end
 end
