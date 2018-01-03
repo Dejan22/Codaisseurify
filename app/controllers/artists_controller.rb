@@ -4,9 +4,12 @@ class ArtistsController < ApplicationController
 
   def index
     @artist = Artist.all.order(params[:sort])
+      @artists = Artist.all
   end
 
   def show
+    @artists = Artist.first
+
   end
 
   def new
@@ -34,6 +37,6 @@ class ArtistsController < ApplicationController
   end
 
   def artist_params
-    params.require(:artists).permit(:artist_name, :first_name, :last_name, :genre, :image_url)
+    params.require(:artists).permit(:artist_name, :first_name, :last_name, :genre, :image_url, :songs_id)
   end
 end
